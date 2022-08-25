@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aek-wk-yK9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20037"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Post List Table View Controller-->
+        <scene sceneID="IUL-hg-isf">
+            <objects>
+                <tableViewController id="aek-wk-yK9" customClass="PostListTableViewController" customModule="RedditApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BYz-wo-yId">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="QpO-QV-nfI">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="507" id="RNu-EN-bzJ" customClass="PostTableViewCell" customModule="RedditApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="507"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RNu-EN-bzJ" id="Ark-mi-PIB">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="507"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.on.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zo1-6f-wJq">
+                                            <rect key="frame" x="62" y="12.5" width="290" height="289"/>
+                                            <color key="tintColor" systemColor="systemGray5Color"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="zo1-6f-wJq" secondAttribute="height" multiplier="1:1" id="vIR-h0-O8D"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(title)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydA-U4-Pgv">
+                                            <rect key="frame" x="41.5" y="314" width="331" height="148"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="5u0-qv-n25"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(ups)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMZ-lq-8Ow">
+                                            <rect key="frame" x="41.5" y="474" width="331" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="DQw-eM-hEm"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="KMZ-lq-8Ow" firstAttribute="width" secondItem="Ark-mi-PIB" secondAttribute="width" multiplier="0.8" id="7OD-fw-o6V"/>
+                                        <constraint firstItem="ydA-U4-Pgv" firstAttribute="width" secondItem="Ark-mi-PIB" secondAttribute="width" multiplier="0.8" id="8gU-PX-fPE"/>
+                                        <constraint firstItem="KMZ-lq-8Ow" firstAttribute="top" secondItem="ydA-U4-Pgv" secondAttribute="bottom" constant="12" id="CyU-ne-min"/>
+                                        <constraint firstItem="KMZ-lq-8Ow" firstAttribute="centerX" secondItem="Ark-mi-PIB" secondAttribute="centerX" id="azZ-j0-pc1"/>
+                                        <constraint firstItem="zo1-6f-wJq" firstAttribute="top" secondItem="Ark-mi-PIB" secondAttribute="top" constant="12" id="fzH-Mz-84g"/>
+                                        <constraint firstItem="zo1-6f-wJq" firstAttribute="width" secondItem="Ark-mi-PIB" secondAttribute="width" multiplier="0.7" id="gvW-Iw-GrV"/>
+                                        <constraint firstAttribute="bottom" secondItem="KMZ-lq-8Ow" secondAttribute="bottom" constant="12" id="lpf-Q3-FVr"/>
+                                        <constraint firstItem="zo1-6f-wJq" firstAttribute="centerX" secondItem="Ark-mi-PIB" secondAttribute="centerX" id="myO-Hk-fup"/>
+                                        <constraint firstItem="ydA-U4-Pgv" firstAttribute="top" secondItem="zo1-6f-wJq" secondAttribute="bottom" constant="12" id="qXQ-cc-haK"/>
+                                        <constraint firstItem="ydA-U4-Pgv" firstAttribute="centerX" secondItem="Ark-mi-PIB" secondAttribute="centerX" id="u5C-C7-ByR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="postImageView" destination="zo1-6f-wJq" id="I3F-dc-TMr"/>
+                                    <outlet property="postTitleLabel" destination="ydA-U4-Pgv" id="grO-rq-Q67"/>
+                                    <outlet property="postUpsLabel" destination="KMZ-lq-8Ow" id="FW3-mD-w5X"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aek-wk-yK9" id="V9e-rf-Wqe"/>
+                            <outlet property="delegate" destination="aek-wk-yK9" id="f9B-ye-zTb"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="QpO-QV-nfI" id="Evd-K3-0rR"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYG-fI-Bj2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94.20289855072464" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.on.rectangle" catalog="system" width="128" height="97"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
